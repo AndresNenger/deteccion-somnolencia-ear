@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Modelo de MediaPipe (se descarga automaticamente) y salidas
+models/*.task
+*.mp4
+*.avi
+*.mov
+ear*.csv
+!docs/**/*.mp4

@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "somnolencia"
+version = "0.1.0"
+description = "Deteccion de somnolencia en conductores con vision por computadora (EAR + MediaPipe)"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+dependencies = [
+    "numpy",
+    "opencv-python",
+    "mediapipe",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+notebook = ["pandas", "matplotlib"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
